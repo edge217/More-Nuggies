@@ -29,7 +29,7 @@ public class ItemRegistration {
 
 	public static final RegistryObject<Item> COOKED_CHICKEN_NUGGET = ITEMS.register(
 		"cooked_chicken_nugget", () -> new Item(new Item.Properties().tab(
-			CreativeModeTab.TAB_FOOD)));
+			CreativeModeTab.TAB_FOOD).food(ChickenNuggiesFoodProperties.COOKED_CHICKEN_NUGGET)));
 
 	public static final RegistryObject<Item> COAL_NUGGET = ITEMS.register("coal_nugget",
 		() -> new Item(new Item.Properties().tab(
@@ -86,7 +86,7 @@ public class ItemRegistration {
 
 	public static final RegistryObject<Item> RAW_CHICKEN_NUGGET = ITEMS.register(
 		"raw_chicken_nugget", () -> new Item(new Item.Properties().tab(
-			CreativeModeTab.TAB_FOOD)));
+			CreativeModeTab.TAB_FOOD).food(ChickenNuggiesFoodProperties.RAW_CHICKEN_NUGGET)));
 
 	public static final RegistryObject<Item> REDSTONE_NUGGET = ITEMS.register("redstone_nugget",
 		() -> new Item(new Item.Properties().tab(

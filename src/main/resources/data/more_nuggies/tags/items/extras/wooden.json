@@ -1,0 +1,29 @@
+{
+  "values": [
+    "#minecraft:wooden_buttons",
+    "#minecraft:wooden_pressure_plates",
+    "#minecraft:wooden_doors",
+    "#minecraft:wooden_trapdoors",
+    "#forge:fence_gates/wooden",
+    "#minecraft:boats",
+    "#minecraft:signs",
+    "#minecraft:all_signs",
+    "minecraft:bowl",
+    "#minecraft:wooden_fences",
+    "#forge:fences/wooden",
+    "#forge:chests/wooden",
+    "minecraft:armor_stand",
+    "minecraft:ladder",
+    "minecraft:dead_bush",
+    "#forge:fishing_rods",
+    "#forge:tools/fishing_rods",
+    "minecraft:warped_fungus_on_a_stick",
+    "minecraft:carrot_on_a_stick",
+    "#forge:tools/crossbows",
+    "#forge:crossbows",
+    "#forge:bows",
+    "#forge:tools/bows",
+    "#forge:books",
+    "minecraft:paper"
+  ]
+}
