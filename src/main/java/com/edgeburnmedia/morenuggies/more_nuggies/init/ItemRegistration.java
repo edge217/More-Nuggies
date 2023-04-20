@@ -8,10 +8,13 @@ import static com.edgeburnmedia.morenuggies.more_nuggies.MoreNuggies.MODID;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
 public class ItemRegistration {
 
@@ -30,7 +33,12 @@ public class ItemRegistration {
 
 	public static final RegistryObject<Item> COAL_NUGGET = ITEMS.register("coal_nugget",
 		() -> new Item(new Item.Properties().tab(
-			CreativeModeTab.TAB_MATERIALS))); // TODO: Add coal nugget as fuel
+			CreativeModeTab.TAB_MATERIALS)) {
+			@Override
+			public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+				return 200;
+			}
+		});
 
 	public static final RegistryObject<Item> COBBLESTONE_NUGGET = ITEMS.register(
 		"cobblestone_nugget", () -> new Item(new Item.Properties().tab(
@@ -92,6 +100,15 @@ public class ItemRegistration {
 		() -> new Item(new Item.Properties().tab(
 			CreativeModeTab.TAB_MATERIALS)));
 
+	public static final RegistryObject<Item> CHARCOAL_NUGGET = ITEMS.register("charcoal_nugget",
+		() -> new Item(new Item.Properties().tab(
+			CreativeModeTab.TAB_MATERIALS)) {
+			@Override
+			public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+				return 200;
+			}
+		});
+
 	public ItemRegistration(IEventBus modEventBus) {
 		this.modEventBus = modEventBus;
 	}
@@ -100,4 +117,10 @@ public class ItemRegistration {
 		ITEMS.register(modEventBus);
 	}
 
+	private static class FuelItem extends Item {
+
+		public FuelItem(int burnTime, Item.Properties properties) {
+			super(properties);
+		}
+	}
 }
